@@ -26,8 +26,8 @@ export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 # export PYSPARK_PYTHON=python3
 alias snotebook='$SPARK_PATH/bin/pyspark --master local[2]'
 ```
-(credit to Michael Galarnyk)
-3) press `ESC` to exit insert mode, enter `:wq` to exit VIM. *[You could fine more VIM commands here](http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm)*
+(credit to Michael Galarnyk)<br>
+3) press `ESC` to exit insert mode, enter `:wq` to exit VIM. *[You could fine more VIM commands here](http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm)*<br>
 4) refresh terminal profile by `$ source ~/.bash_profile`
 5) you should be able to open Jupyter Notebook by simply calling `$ jupyter notebook`
 6) to check if your notebook is initialized with SparkContext, you could try the following codes in your notebook:
@@ -41,3 +41,45 @@ stats = dots.stats()
 print('Mean:', stats.mean())
 print('stdev:', stats.stdev())
 ```
+
+## 3. Common Errors
+### Unable to load native-hadoop library
+This error seems to be quite common for people who's trying to install Hadoop. Basically it means you are running Hadoop on 64bit OS wile Hadoop library is only compiled on 32bit OS. I also had this error and tried several methods, it seems I still have the error but after I did the above steps to call Jupyter Notebook, the error is gone and it didn't have any impact on using SparkConext in the Jupyter Notebook. _If anyone knows any other methods, please do let me know._<br>
+#### Possible solution 1: download and install Hadoop binary, add the following codes to your bash_profile:<br>
+```
+export HADOOP_HOME=~/hadoop-2.8.0
+```
+#### Possible solution 2: add "native" to HADOOP_OPTS:<br>
+```
+export HADOOP_OPTS="$HADOOP_OPTS -Djava.library.path=$HADOOP_HOME/lib/native"
+```
+#### Possible solution 3: similar to solution 2, but add one more line:<br>
+```
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
+```
+<br>
+### Java gateway process exited before sending the driver its port number
+This error is usually caused by JAVA_HOME is not set, so add the following codes to your bash_profile shoud do the trick, remember to change the spark version to the version you have:<br>
+```
+export JAVA_HOME=/Library/Java/Home
+```
+<br>
+But also [Julius Wang](https://medium.com/data-science-canvas/configuring-ipython-notebook-for-spark-on-mac-os-8ec2d88ce724) shared another possible cause and fix of setting up SPARK_HOME that you could also try:  
+```
+export SPARK_HOME=/<your spark installation location>/spark-1.6.0
+export PATH=$SPARK_HOME/bin:$PATH
+export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
+export PYSPARK_SUBMIT_ARGS=pyspark-shell
+```
+
+### If you want to uninstall any previous version of Java, use the following code:<br>
+```
+sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin 
+sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefPane 
+sudo rm -fr ~/Library/Application\ Support/Java
+```
+
+### If you want to uninstall Spark, use `$ brew remove --force apache-spark`
+
+If you have any questions on the steps, or if you encountered any other errors, you could let me know and I will try to help. Anyway, I'm just a newbie who's only being studying Python, Spark, or machine learning for not very long time, but I'm more than willing to discuss these topics and learn from all of you. By the way, I had experience working as a technical support when I was in college, so at least I'm confident in working in cmd and I'm very good at looking for sulotions from google search. :)
