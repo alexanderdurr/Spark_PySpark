@@ -60,13 +60,12 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 ```
 <br>
 
-### Java gateway process exited before sending the driver its port number <br>
+### Java gateway process exited before sending the driver its port number
 This error is usually caused by JAVA_HOME is not set, so add the following codes to your bash_profile shoud do the trick, remember to change the spark version to the version you have:<br>
 ```
 export JAVA_HOME=/Library/Java/Home
 ```
-<br>
-But also [Julius Wang](https://medium.com/data-science-canvas/configuring-ipython-notebook-for-spark-on-mac-os-8ec2d88ce724) shared another possible cause and fix of setting up SPARK_HOME that you could also try:  
+But also [Julius Wang](https://medium.com/data-science-canvas/configuring-ipython-notebook-for-spark-on-mac-os-8ec2d88ce724) shared another possible cause and fix of setting up SPARK_HOME that you could also try:<br>  
 ```
 export SPARK_HOME=/<your spark installation location>/spark-1.6.0
 export PATH=$SPARK_HOME/bin:$PATH
