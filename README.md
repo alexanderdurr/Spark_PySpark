@@ -1,5 +1,5 @@
 # Installing Spark/PySpark on Mac and Ways to Fix Some of the Common Errors
-I followed the majority steps from Michael Galarnyk's post [Install Spark on Mac (PySpark)](https://medium.com/@GalarnykMichael/install-spark-on-mac-pyspark-453f395f240b). But I've shortened the installation part by using Homebrew <br>
+I followed most of steps (open Jupyter Notebook by calling and initializing pyspark) from Michael Galarnyk's post [Install Spark on Mac (PySpark)](https://medium.com/@GalarnykMichael/install-spark-on-mac-pyspark-453f395f240b). But I've shortened the installation part by using Homebrew <br>
 I will also share my methods on fixing some of the common errors that you might encounter:
 - Unable to load native-hadoop library for your platform… using builtin-java classes where applicable
 - Java gateway process exited before sending the driver its port number
@@ -28,8 +28,8 @@ alias snotebook='$SPARK_PATH/bin/pyspark --master local[2]'
 ```
 (credit to Michael Galarnyk)<br>
 3) press `ESC` to exit insert mode, enter `:wq` to exit VIM. *[You could fine more VIM commands here](http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm)*<br>
-4) refresh terminal profile by `$ source ~/.bash_profile`
-5) you should be able to open Jupyter Notebook by simply calling `$ jupyter notebook`
+4) refresh terminal profile by `$ source ~/.bash_profile`<br>
+5) you should be able to open Jupyter Notebook by simply calling `$ jupyter notebook`<br>
 6) to check if your notebook is initialized with SparkContext, you could try the following codes in your notebook, or you could check my notebook [here](https://github.com/yajieli912/Spark_PySpark/blob/master/spark.ipynb):
 ```
 sc = SparkContext.getOrCreate()
@@ -45,7 +45,7 @@ print('stdev:', stats.stdev())
 ## 3. Common Errors
 ### Unable to load native-hadoop library
 This error seems to be quite common for people who's trying to install Hadoop. Basically it means you are running Hadoop on 64bit OS wile Hadoop library is only compiled on 32bit OS. I also had this error and tried several methods, it seems I still have the error but after I did the above steps to call Jupyter Notebook, the error is gone and it didn't have any impact on using SparkConext in the Jupyter Notebook. _If anyone knows any other methods, please do let me know._<br>
-#### Possible solution 1: download and install Hadoop binary, add the following codes to your bash_profile:<br>
+#### Possible solution 1: download and install Hadoop binary in your home directory, add the following codes to your bash_profile, remember to change version to your version:<br>
 ```
 export HADOOP_HOME=~/hadoop-2.8.0
 ```
