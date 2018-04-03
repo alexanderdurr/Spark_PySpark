@@ -59,8 +59,8 @@ export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 ```
 <br>
+
 ### Java gateway process exited before sending the driver its port number <br>
-<br>
 This error is usually caused by JAVA_HOME is not set, so add the following codes to your bash_profile shoud do the trick, remember to change the spark version to the version you have:<br>
 ```
 export JAVA_HOME=/Library/Java/Home
@@ -73,14 +73,14 @@ export PATH=$SPARK_HOME/bin:$PATH
 export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.9-src.zip:$PYTHONPATH
 export PYSPARK_SUBMIT_ARGS=pyspark-shell
 ```
-
-### If you want to uninstall any previous version of Java, use the following code:<br>
+## 4. Some other useful commands
+#### If you want to uninstall any previous version of Java, use the following code:<br>
 ```
 sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin 
 sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefPane 
 sudo rm -fr ~/Library/Application\ Support/Java
 ```
 
-### If you want to uninstall Spark, use `$ brew remove --force apache-spark`
+#### If you want to uninstall Spark, use `$ brew remove --force apache-spark`
 
 If you have any questions on the steps, or if you encountered any other errors, you could let me know and I will try to help. Anyway, I'm just a newbie who's only being studying Python, Spark, or machine learning for not very long time, but I'm more than willing to discuss these topics and learn from all of you. By the way, I had experience working as a technical support when I was in college, so at least I'm confident in working in cmd and I'm very good at looking for sulotions from google search. :)
