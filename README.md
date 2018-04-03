@@ -12,7 +12,7 @@ The Spark installation also requires specific version of Java (java 8), but we c
 3) check if pyspark is properly install by `$ pyspark`, you shuold see something like this: ![alt text](https://github.com/yajieli912/Spark_PySpark/blob/master/images/pyspark.jpg?raw=true)
 
 ## 2. Open Jupyter Notebook with PySpark Ready
-### Prerequisites: PySpark works fine when calling `$ pyspark`
+### Prerequisites: PySpark works correctly when calling `$ pyspark`
 Jupyter Notebook is a very convenient tool to write and save codes, so in this instruction, I will share the steps of how to create a global profile in order to create Jupyter Notebook automatically initialized with SparkContext. <br>
 In order to create a global profile for your terminal session, you will need to create or modify your .bash_profile or .bashrc file. Here, I will use .bash_profile as my example<br>
 1) check if you have .bash_profile in your system `$ ls -a`, if you don't have one, create one using `$ touch ~/.bash_profile`
