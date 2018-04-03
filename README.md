@@ -8,4 +8,4 @@ I will also share my methods on fixing some of the common errors that you might 
 ### Prerequisites: Anaconda, Python3
 The Spark installation also requires specific version of Java (java 8), but we can also install it using Homebrew.
 1) open terminal, enter `$ brew install apache-spark`
-2) once you see this error message ![alt text](https://github.com/yajieli912/Spark_PySpark/blob/master/images/6B23E333-CDAC-494A-9AE7-7D22F370A39D-49128-0000211C7B7233CD_tmp.jpg?raw=true)
+2) once you see this error message ![alt text](https://github.com/yajieli912/Spark_PySpark/blob/master/images/fullsizeoutput_f7c.jpeg?raw=true)
