@@ -59,7 +59,7 @@ export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 ```
 <br>
-### Java gateway process exited before sending the driver its port number
+### Java gateway process exited before sending the driver its port number<br>
 This error is usually caused by JAVA_HOME is not set, so add the following codes to your bash_profile shoud do the trick, remember to change the spark version to the version you have:<br>
 ```
 export JAVA_HOME=/Library/Java/Home
