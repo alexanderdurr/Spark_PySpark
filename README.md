@@ -5,6 +5,7 @@ I will also share my methods on fixing some of the common errors that you might 
 - Java gateway process exited before sending the driver its port number
 
 ## 1. Install Spark
-### Prerequisites: Anaconda
+### Prerequisites: Anaconda, Python3
 The Spark installation also requires specific version of Java (java 8), but we can also install it using Homebrew.
 1) open terminal, enter `$ brew install apache-spark`
+2) once you see this error message ![alt text](https://github.com/yajieli912/Spark_PySpark/blob/master/images/6B23E333-CDAC-494A-9AE7-7D22F370A39D-49128-0000211C7B7233CD_tmp.jpg?raw=true)
