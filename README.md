@@ -82,4 +82,4 @@ sudo rm -fr ~/Library/Application\ Support/Java
 
 #### If you want to uninstall Spark, use `$ brew remove --force apache-spark`
 
-If you have any questions on the steps, or if you encountered any other errors, you could let me know and I will try to help. Anyway, I'm just a newbie who's only being studying Python, Spark, or machine learning for not very long time, but I'm more than willing to discuss these topics and learn from all of you. By the way, I had experience working as a technical support when I was in college, so at least I'm confident in working in cmd and I'm very good at looking for sulotions from google search. :)
+If you have any questions on the steps, or if you encountered any other errors, you could let me know and I will try to help. Anyway, I'm just a newbie who's only being studying Python, Spark, or machine learning for not very long time, but I'm more than willing to discuss these topics and learn from all of you. By the way, I had experience working as a technical support when I was in college, so at least I'm confident in working in cmd and I'm very good at looking for solutions from google search. :)
