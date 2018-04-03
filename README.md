@@ -1,2 +1,10 @@
-# Spark_PySpark
-This repository contains guidelines on installing Spark/PySpark and examples on useful spark commands.
+# Installing Spark on Mac and Ways to Fix Some of the Common Errors
+I followed the majority steps from Michael Galarnyk's post [Install Spark on Mac (PySpark)](https://medium.com/@GalarnykMichael/install-spark-on-mac-pyspark-453f395f240b). But I've shortened the installation part by using Homebrew <br>
+I will also share my methods on fixing some of the common errors that you might encounter:
+- Unable to load native-hadoop library for your platform… using builtin-java classes where applicable
+- Java gateway process exited before sending the driver its port number
+
+## 1. Install Spark
+### Prerequisites: Anaconda
+The Spark installation also requires specific version of Java (java 8), but we can also install it using Homebrew.
+1) open terminal, enter `$ brew install apache-spark`
