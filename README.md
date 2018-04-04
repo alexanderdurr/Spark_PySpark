@@ -9,7 +9,7 @@ I will also share my methods on fixing some of the common errors that you might 
 The Spark installation also requires specific version of Java (java 8), but we can also install it using Homebrew.
 1) open terminal, enter `$ brew install apache-spark`
 2) once you see this error message ![alt text](https://github.com/yajieli912/Spark_PySpark/blob/master/images/fullsizeoutput_f7c.jpeg?raw=true) enter `$ brew cask install caskroom/versions/java8` to install Java8
-3) check if pyspark is properly install by `$ pyspark`, you shuold see something like this: ![alt text](https://github.com/yajieli912/Spark_PySpark/blob/master/images/pyspark.jpg?raw=true)
+3) check if pyspark is properly install by `$ pyspark`, you should see something like this: ![alt text](https://github.com/yajieli912/Spark_PySpark/blob/master/images/pyspark.jpg?raw=true)
 
 ## 2. Open Jupyter Notebook with PySpark Ready
 ### Prerequisites: PySpark works correctly when calling `$ pyspark`
