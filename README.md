@@ -29,7 +29,7 @@ alias snotebook='$SPARK_PATH/bin/pyspark --master local[2]'
 (credit to Michael Galarnyk)<br>
 3. press `ESC` to exit insert mode, enter `:wq` to exit VIM. *[You could fine more VIM commands here](http://www.radford.edu/~mhtay/CPSC120/VIM_Editor_Commands.htm)*<br>
 4. refresh terminal profile by `$ source ~/.bash_profile`<br>
-5. you should be able to open Jupyter Notebook by simply calling `$ jupyter notebook`<br>
+5. you should be able to open Jupyter Notebook simplyy btcalling `$ pyspark`<br>
 6. to check if your notebook is initialized with SparkContext, you could try the following codes in your notebook, or you could check my notebook [here](https://github.com/yajieli912/Spark_PySpark/blob/master/spark.ipynb):
 ```
 sc = SparkContext.getOrCreate()
